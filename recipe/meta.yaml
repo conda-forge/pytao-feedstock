@@ -1,13 +1,13 @@
 {% set name = "pytao" %}
-{% set version = "0.1.7" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 62b91f7b349fbdbe097474a38d8a226993a7786f747598b09b41bba360e36adc
+  url: https://github.com/bmad-sim/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: dc2544ac6295fb60f5903fc3dbc785040ddf301da8eac2fdae3d9fddd8c22570
 
 build:
   noarch: python
@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - h5py
     - numpy
     - pexpect
