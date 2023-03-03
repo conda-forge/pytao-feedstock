@@ -1,11 +1,11 @@
-About pytao
-===========
+About pytao-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytao-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/bmad-sim/pytao
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytao-feedstock/blob/main/LICENSE.txt)
 
 Summary: PyTao is wrapper on top of Tao and allow users to access the Tao library via ctypes or pexpect.
 
