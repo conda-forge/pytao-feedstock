@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/bmad-sim/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: da6d8a83a429cd47f20cbaa995f37d0968f0ae9f0293922d1744848d4988df98
+  sha256: 432e88deb53cb448daa6f6fa406394984084d42ccf625beece9eccbe3b9010f8
 
 build:
   noarch: python
