@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/bmad-sim/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 41cfe48e37e6f14eaec7eacc4d3604904b345d8e0e0eecfae93d7b8bf0320fd1
+  sha256: de2c81ec2db4c824fdd8efe5aa9ef995c282dd62f8d312937c8475fa876a2883
 
 build:
   noarch: python
