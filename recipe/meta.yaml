@@ -38,8 +38,8 @@ about:
     PyTao is wrapper on top of Tao and allow users to access the Tao library via ctypes or pexpect.
     Tao is an open source general purpose program for charged particle and X-ray simulations in 
     accelerators and storage rings.
-  doc_url: hhttps://bmad-sim.github.io/pytao
-  dev_url: hhttps://github.com/bmad-sim/pytao
+  doc_url: https://bmad-sim.github.io/pytao
+  dev_url: https://github.com/bmad-sim/pytao
 
 extra:
   recipe-maintainers:
