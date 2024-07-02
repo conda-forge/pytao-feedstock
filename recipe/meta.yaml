@@ -20,6 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.9
+    - bmad >=20240628.2
     - h5py
     - numpy
     - pexpect
