@@ -9,9 +9,9 @@ Package license: GPL-3.0-only
 
 Summary: PyTao is wrapper on top of Tao and allow users to access the Tao library via ctypes or pexpect.
 
-Development: hhttps://github.com/bmad-sim/pytao
+Development: https://github.com/bmad-sim/pytao
 
-Documentation: hhttps://bmad-sim.github.io/pytao
+Documentation: https://bmad-sim.github.io/pytao
 
 PyTao is wrapper on top of Tao and allow users to access the Tao library via ctypes or pexpect.
 Tao is an open source general purpose program for charged particle and X-ray simulations in
@@ -154,4 +154,5 @@ Feedstock Maintainers
 
 * [@ChristopherMayes](https://github.com/ChristopherMayes/)
 * [@hhslepicka](https://github.com/hhslepicka/)
+* [@ken-lauer](https://github.com/ken-lauer/)
 
