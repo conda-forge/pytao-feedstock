@@ -40,7 +40,7 @@ test:
     - pytao.plotting
     - pytao.plotting.bokeh
   commands:
-    - pytao --help
+    - echo | pytao --help
     - test -f $PREFIX/bin/pytao-gui  # [unix]
     - pytest -v --pyargs pytao.tests
 
