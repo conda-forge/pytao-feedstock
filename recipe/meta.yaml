@@ -42,7 +42,8 @@ test:
   commands:
     - echo | pytao --help
     - test -f $PREFIX/bin/pytao-gui  # [unix]
-    - pytest -v --pyargs pytao.tests
+    - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
+    - ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests
 
 about:
   home: https://github.com/bmad-sim/pytao
