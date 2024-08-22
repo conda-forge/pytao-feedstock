@@ -21,14 +21,28 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.9
-    - bmad >=20240628.2
+    - bmad >=20240809
     - h5py
+    - matplotlib-base
     - numpy
     - pexpect
+    - pydantic >=2
 
 test:
+  requires:
+    - pytest
+    - pytest-cov
+    - bokeh
+    - ipython
+    - openpmd-beamphysics
   imports:
     - pytao
+    - pytao.plotting
+    - pytao.plotting.bokeh
+  commands:
+    - pytao --help
+    - test -f $PREFIX/bin/pytao-gui  # [unix]
+    - pytest -v --pyargs pytao.tests
 
 about:
   home: https://github.com/bmad-sim/pytao
