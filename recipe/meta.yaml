@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/bmad-sim/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: de2c81ec2db4c824fdd8efe5aa9ef995c282dd62f8d312937c8475fa876a2883
+  sha256: 0614bc499549e592a473806ddeca19daa571e6b1914c2672096ecae873b26a19
 
 build:
   noarch: python
@@ -21,14 +21,30 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.9
-    - bmad >=20240628.2
+    - bmad >=20240809
     - h5py
+    - matplotlib-base
     - numpy
     - pexpect
+    - pydantic >=2
 
 test:
+  requires:
+    - git
+    - pytest
+    - pytest-cov
+    - bokeh
+    - ipython
+    - openpmd-beamphysics
   imports:
     - pytao
+    - pytao.plotting
+    - pytao.plotting.bokeh
+  commands:
+    - echo | pytao --help
+    - test -f $PREFIX/bin/pytao-gui  # [unix]
+    - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
+    - ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests
 
 about:
   home: https://github.com/bmad-sim/pytao
