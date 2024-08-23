@@ -30,6 +30,7 @@ requirements:
 
 test:
   requires:
+    - git
     - pytest
     - pytest-cov
     - bokeh
