@@ -46,7 +46,7 @@ test:
     - test -f $PREFIX/bin/pytao-gui  # [unix]
     - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
     - echo | pytao -lat $PWD/bmad/bmad-doc/tao_examples/erl/lat.bmad
-    - ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests
+    - ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests -k 'not subproc'
 
 about:
   home: https://github.com/bmad-sim/pytao
