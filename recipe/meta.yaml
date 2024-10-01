@@ -1,13 +1,13 @@
 {% set name = "pytao" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/bmad-sim/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 0614bc499549e592a473806ddeca19daa571e6b1914c2672096ecae873b26a19
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 11d2f6940b2103f0aeee719d79bf99d236fc3a3ebda20fd78e3c3515c7412d45
 
 build:
   noarch: python
@@ -44,7 +44,7 @@ test:
     - echo | pytao --help
     - test -f $PREFIX/bin/pytao-gui  # [unix]
     - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
-    - ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests
+    - TAO_REUSE_SUBPROCESS=1 ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests
 
 about:
   home: https://github.com/bmad-sim/pytao
