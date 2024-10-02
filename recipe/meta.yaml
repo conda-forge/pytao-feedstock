@@ -46,7 +46,7 @@ test:
     - test -f $PREFIX/bin/pytao-gui  # [unix]
     - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
     - echo | pytao -lat $PWD/bmad/bmad-doc/tao_examples/erl/lat.bmad
-    - TAO_REUSE_SUBPROCESS=1 ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests -k 'not help'
+    - TAO_REUSE_SUBPROCESS=1 ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests -k "not help"
 
 about:
   home: https://github.com/bmad-sim/pytao
