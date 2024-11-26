@@ -1,5 +1,6 @@
 {% set name = "pytao" %}
 {% set version = "0.4.4" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -16,11 +17,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools_scm
+    - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - bmad >=20241121
     - h5py
     - matplotlib-base
@@ -30,6 +32,7 @@ requirements:
 
 test:
   requires:
+    - python {{ python_min }}
     - git
     - pytest
     - pytest-cov
