@@ -23,12 +23,13 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bmad >=20241121
+    - bmad >=20250226
     - h5py
     - matplotlib-base
     - numpy
     - pexpect
     - pydantic >=2
+    - tqdm
 
 test:
   requires:
