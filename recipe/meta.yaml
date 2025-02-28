@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "0.4.6" %}
+{% set version = "0.4.7" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3aaf2f6fb38df84a992976b17ced09078a15b68ab2ad3c31ff0cb7ce4d9ea638
+  sha256: 3547c6df2d83fb9549af14ff3aa3875400b865aeeeffe7080689114ef6a10487
 
 build:
   noarch: python
@@ -23,12 +23,13 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bmad >=20241121
+    - bmad >=20250226
     - h5py
     - matplotlib-base
     - numpy
     - pexpect
     - pydantic >=2
+    - tqdm
 
 test:
   requires:
