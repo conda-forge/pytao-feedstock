@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "0.4.8" %}
+{% set version = "0.5.0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9285e8efcfd3b04c50c52db34c967de604b813bf838669758bda379c3d74a7a8
+  sha256: 82e913a082d0f2efd280a0f0e03c83f486cabf6e2ee3ebc4f47efc04e6ded6d8
 
 build:
   noarch: python
@@ -49,7 +49,7 @@ test:
     # - pytao --help
     - test -f $PREFIX/bin/pytao-gui  # [unix]
     - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
-    - echo | pytao -lat $PWD/bmad/bmad-doc/tao_examples/erl/lat.bmad
+    - echo | pytao -noplot -lat $PWD/bmad/bmad-doc/tao_examples/erl/lat.bmad
     - TAO_REUSE_SUBPROCESS=1 ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests -k "not help and not test_plot"
 
 about:
