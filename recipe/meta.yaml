@@ -23,12 +23,16 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bmad >=20250925
+    - bmad >=20260317
     - h5py
     - matplotlib-base
     - numpy
+    - openPMD-beamphysics >=0.14.1
+    - orjson
+    - ormsgpack
     - pexpect
-    - pydantic >=2
+    - pydantic >=2.12.5
+    - rich
     - tqdm
 
 test:
