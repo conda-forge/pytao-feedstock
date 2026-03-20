@@ -49,9 +49,7 @@ test:
     - pytao.plotting
     - pytao.plotting.bokeh
   commands:
-    # Add back once https://github.com/bmad-sim/pytao/issues/101 is resolved:
-    # - pytao --help
-    - test -f $PREFIX/bin/pytao-gui  # [unix]
+    - pytao --help
     - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
     - echo | pytao -noplot -lat $PWD/bmad/bmad-doc/tao_examples/erl/lat.bmad
     - TAO_REUSE_SUBPROCESS=1 ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests -k "not help and not test_plot"
