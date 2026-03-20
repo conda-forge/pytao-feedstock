@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "0.5.7" %}
+{% set version = "1.0.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9a756638dc93f6d7fedc5f825976aa9911175177664ca35f56fab2f957d63055
+  sha256: 60f61716f452ec7b9c3df2a9c5f980bb6376bbdf203a63e99b4642a6e84721bd
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
@@ -23,12 +23,16 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bmad >=20250925
+    - bmad >=20260317
     - h5py
     - matplotlib-base
     - numpy
+    - openPMD-beamphysics >=0.14.1
+    - orjson
+    - ormsgpack
     - pexpect
-    - pydantic >=2
+    - pydantic >=2.12.5
+    - rich
     - tqdm
 
 test:
@@ -45,9 +49,7 @@ test:
     - pytao.plotting
     - pytao.plotting.bokeh
   commands:
-    # Add back once https://github.com/bmad-sim/pytao/issues/101 is resolved:
-    # - pytao --help
-    - test -f $PREFIX/bin/pytao-gui  # [unix]
+    - pytao --help
     - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
     - echo | pytao -noplot -lat $PWD/bmad/bmad-doc/tao_examples/erl/lat.bmad
     - TAO_REUSE_SUBPROCESS=1 ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests -k "not help and not test_plot"
