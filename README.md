@@ -155,6 +155,3 @@ Feedstock Maintainers
 * [@hhslepicka](https://github.com/hhslepicka/)
 * [@ken-lauer](https://github.com/ken-lauer/)
 
-
-<!-- dummy commit to enable rerendering -->
-
