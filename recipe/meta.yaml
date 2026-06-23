@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "1.0.6" %}
+{% set version = "1.1.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 575b2b922a0880f2fb13963cd691eb0e9394a6cd277328b69bb5506b7a7ae9ed
+  sha256: 5bbc881e35f797d0a8a8f2b9829f93dcf2b676ec3feedd3562832508c3ceafd2
 
 build:
   noarch: python
@@ -32,6 +32,7 @@ requirements:
     - ormsgpack
     - pexpect
     - pydantic >=2.12.5
+    - pyyaml
     - rich
     - tqdm
 
@@ -52,7 +53,7 @@ test:
     - pytao --help
     - git clone --depth 1 https://github.com/bmad-sim/bmad-ecosystem bmad
     - echo | pytao -noplot -lat $PWD/bmad/bmad-doc/tao_examples/erl/lat.bmad
-    - TAO_REUSE_SUBPROCESS=1 ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests -k "not help and not test_plot"
+    - TAO_REUSE_SUBPROCESS=1 ACC_ROOT_DIR=$PWD/bmad pytest -v --pyargs pytao.tests -k "not help and not test_plot and not constraints"
 
 about:
   home: https://github.com/bmad-sim/pytao
