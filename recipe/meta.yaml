@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5eeccafdbcb0d823d743a971fb8fbda5a34f02bb1504fc2f56a58ffa0b78c15c
+  sha256: 605cb81d7715b71b33de482d91d56642a7734d61c9296c0e341a52017de1bd5a
 
 build:
   noarch: python
