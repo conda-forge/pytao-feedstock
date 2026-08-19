@@ -1,6 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "1.2.2" %}
-{% set python_min = "3.10" %}
+{% set version = "1.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9e3ffbdd48fade8515a150ac2318053af36bed329d4ce2731023e78d24bfdc44
+  sha256: 217c54dcc177d81e4f88a8cfa45517a4d0f64dc4d695509195f8320d5e34c183
 
 build:
   noarch: python
