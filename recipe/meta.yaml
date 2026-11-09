@@ -22,7 +22,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - bmad >=20261009
+    - bmad >=20261108.0
     - h5py
     - matplotlib-base
     - numpy
