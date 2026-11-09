@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2ca4f2c276d44931f539b12eaca5ed5944849c3d93215bf294f73bd7274f31ba
+  sha256: 3e228b86256f4885e57b96bc5c5152b98926fb734ea51a375d7872d0539d873e
 
 build:
   noarch: python
