@@ -1,5 +1,5 @@
 {% set name = "pytao" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3e228b86256f4885e57b96bc5c5152b98926fb734ea51a375d7872d0539d873e
+  sha256: 1ebb24b261eade52a1526c56bc937d9bac9439c4665f78942b4c70ae8c823a01
 
 build:
   noarch: python
@@ -25,8 +25,8 @@ requirements:
     - bmad >=20261108.0
     - h5py
     - matplotlib-base
-    - numpy
-    - openpmd-beamphysics >=0.14.1
+    - numpy >=2.2
+    - openpmd-beamphysics >=0.17.0
     - orjson
     - ormsgpack
     - pexpect
@@ -43,7 +43,8 @@ test:
     - pytest-cov
     - bokeh
     - ipython
-    - openpmd-beamphysics
+    - numpy >=2.2
+    - openpmd-beamphysics >=0.17.0
   imports:
     - pytao
     - pytao.plotting
