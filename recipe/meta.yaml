@@ -25,8 +25,8 @@ requirements:
     - bmad >=20261108.0
     - h5py
     - matplotlib-base
-    - numpy
-    - openpmd-beamphysics >=0.14.1
+    - numpy >=2.2
+    - openpmd-beamphysics >=0.17.0
     - orjson
     - ormsgpack
     - pexpect
@@ -43,7 +43,8 @@ test:
     - pytest-cov
     - bokeh
     - ipython
-    - openpmd-beamphysics
+    - numpy >=2.2
+    - openpmd-beamphysics >=0.17.0
   imports:
     - pytao
     - pytao.plotting
